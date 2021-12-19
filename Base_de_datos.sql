@@ -7,7 +7,7 @@ CREATE TABLE users (
 );
 
 CREATE TABLE tarea (
-        titulo varchar (50) not null UNIQUE,
+        titulo varchar (50) not null,
         contenido text default null,
         fecha_registro datetime,
         fecha_vencimiento datetime,
