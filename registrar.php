@@ -23,17 +23,16 @@
     }
     else
     {
+        echo "<h1> <u>Regístrate en PANQUICITO </u></h1>";
         echo "
-        <h1>Regístrate en PANQUICITO</h1>
-
         <form action='registrar.php' method='post' len><pre>
 
-        Nombre   <input type='text' name='nombre' placeholder ='Ingrese Su Nombre'>
-        Apellido <input type='text' name='apellido' placeholder ='Ingrese su Apellido'>
-        Usuario  <input type='text' name='username' placeholder ='Nombre de usuario'>
-        Password <input type='password' name='password' placeholder ='Ingrese su contraseña'>
-                 <input type='hidden' name='reg' value='yes'> 
-                 <input type='submit' value='REGISTRAR'></pre>
+        <input type='text' name='nombre' placeholder ='Ingrese Su Nombre' required='required'>
+        <input type='text' name='apellido' placeholder ='Ingrese su Apellido' required='required'>
+        <input type='text' name='username' placeholder ='Nombre de usuario' required='required'>
+        <input type='password' name='password' placeholder ='Ingrese su contraseña' required='required'>
+        <input type='hidden' name='reg' value='yes'> 
+        <input type='submit' value='REGISTRAR'></pre>
         </form>";
         
         echo "<a href='index.php'>Iniciar Sesión</a>";
