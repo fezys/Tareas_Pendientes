@@ -65,7 +65,7 @@
       echo "<FONT SIZE=4 ><br>¿No tienes Una cuenta? <a = href=registrar.php >REGISTRARSE</a> </FONT>";
     }
 
-    
+    $conexion->close();
 
     function mysql_entities_fix_string($conexion, $string)
     {
@@ -75,6 +75,5 @@
     {
         // if (get_magic_quotes_gpc()) $string = stripslashes($string);
         return $conexion->real_escape_string($string);
-    } 
-    $conexion->close();
+    }  
 ?>
