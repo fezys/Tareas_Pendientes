@@ -39,7 +39,7 @@
         else
         {
             echo "
-            <h1>Regístra tus tareas en PANQUICITO</h1>
+            <h1><u>Regístra tus tareas </u></h1>
 
             <form action='ingresar_tareas.php' method='post' len><pre>
 
