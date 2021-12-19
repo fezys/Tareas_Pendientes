@@ -52,11 +52,11 @@
                 <a href='ingresar_tareas.php'>Agregar Tareas</a> <br><br>
                 <a href=cerrar.php>Cerrar sesion</a>");
         }
-        echo "<table BORDER=3 CELLPADDING=10 CELLSPACING=10> <tr> <th colspan=8><h1><FONT COLOR='blue'>TODAS LAS TAREAS REGISTRADAS</FONT></h1></th>
-            </tr>  <tr><th>Titulo</th> <th>Contenido</th>
+        echo "<table BORDER=3 CELLPADDING=10 CELLSPACING=10> <tr> <th colspan=9><h1><FONT COLOR='blue'>TODAS LAS TAREAS REGISTRADAS</FONT></h1></th>
+            </tr>  <tr><th>N° Registro</th><th>Titulo</th> <th>Contenido</th>
             <th>Fecha de Registro</th> <th>Fecha de vencimiento</th> 
             <th>Estado</th> <th>Archivar Tarea</th> <th>Modificar Tarea</th> <th>Eliminar</th></tr>";
-           
+        
         for ($j = 0; $j < $filas; $j++)
         {
             $fila = $result->fetch_array(MYSQLI_NUM);
@@ -74,6 +74,11 @@
             }
            
             echo "<tr>";
+
+            //mostrando orden de registro
+            $aux=$j+1;           
+            echo "<td><FONT SIZE=6 COLOR='blue'><b>$aux °</b> </FONT></td>";
+
             for ($k = 0; $k <5; ++$k)
             echo "<td>". htmlspecialchars($fila[$k])." </td>";
 
@@ -95,7 +100,6 @@
             //modificar una tarea
             if($estado=='Pendiente')
             {
-                //modificar una tarea
                         
                 echo "
                 <td >
