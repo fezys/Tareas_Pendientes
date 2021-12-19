@@ -56,10 +56,10 @@
                    <a href=cerrar.php>Cerrar sesion</a>");
                }
                echo "<table BORDER=3 CELLPADDING=10 CELLSPACING=10> <tr> <th colspan=9><h1><FONT COLOR='blue'>TAREAS PENDIENTES</FONT></h1> </th> 
-                    </tr><tr><th>Titulo</th> <th>Contenido</th>
+                    </tr><tr><th>Prioridad</th><th>Titulo</th> <th>Contenido</th>
                     <th>Fecha de Registro</th>   <th>Fecha de vencimiento</th>
                     <th>Estado</th> <th>Archivar Tarea</th> <th>Modificar Tarea</th> 
-                    <th>Eliminar</th> <th>Prioridad</th> </tr>";
+                    <th>Eliminar</th>  </tr>";
            
                 $aux=0;
                 for ($j = 0; $j < $filas; $j++)
@@ -79,6 +79,16 @@
                     }
                               
                     echo "<tr>";
+
+                    //mostrando prioridad
+
+                    if($estado=='Pendiente'){
+                        $aux++;
+                    }
+                    
+                    echo "<td><FONT SIZE=6 COLOR='blue'><b>$aux °</b> </FONT></td>";
+                
+                    
                     for ($k = 0; $k <5; ++$k)
                         echo "<td>". htmlspecialchars($fila[$k]). "</td>";
                                             
@@ -111,15 +121,6 @@
                             <input type='submit' value='Eliminar Tarea'>
                             </form></td>";
 
-                        //mostrando prioridad
-
-                    if($estado=='Pendiente'){
-                        $aux++;
-                    }
-                    
-                    echo "<td>$aux °</td>";
-                
-                    echo "</tr>";
 
                 }
                 echo "</table>";
