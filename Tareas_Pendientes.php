@@ -117,12 +117,13 @@
                 echo "<br><br>";
                 echo "<a href='ingresar_tareas.php'>Agregar Tareas</a><br><br>";
                 echo "<a href=cerrar.php>Cerrar sesion</a> ";
-    }
-    else echo "Por favor <a href=index.php>Click aqui</a>
-                para ingresar";
+        $result->close();
+        $conexion->close();
 
-    $result->close();
-    $conexion->close();
+    }
+    else echo "Usted, no ha iniciado sesión <br>Por favor <a href=index.php>Click aqui</a> para ingresar";
+
+    
                         
     function get_post($con, $var)
     {
